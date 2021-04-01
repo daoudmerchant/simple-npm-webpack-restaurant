@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
+
+* {
+    color: white;
+    font-family: 'Baskervville', serif;
+}
+
+html, body {
+    background: url(./images/restaurant-background.jpg) no-repeat center 65% fixed;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-width: 70%;
+    min-height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5rem;
+}
+
+#content, nav {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+nav, #navigation {
+    display: flex;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: stretch;
+    user-select: none;
+    align-items: center;
+}
+
+#name {
+    font-size: 1.8rem;
+    padding: .2rem 2rem;
+}
+
+#navigation {
+    margin: 0 1rem 0 auto;
+    padding: 0
+}
+
+.page {
+    font-size: 1.2rem;
+    width: 7rem;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.subhead {
+    font-style: italic;
+}
+
+#copy {
+    padding: 0 3rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+p {
+    color: white;
+}
+
+/* Menu styles */
+
+.dishcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 1rem;
+}
+
+.dish {
+    background-color:rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.dishName {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.dishInfo {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.dishPrice {
+    font-size: 1.3rem;
+}
+
+.selectedTab {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+    font-weight: bold;
+}
+
+/* Contact styles */
+
+.contact {
+    list-style-type: none;
+    font-size: 1.5rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 3fr);
+    margin: .5em 10%;
+    gap: 2rem;
+}
+
+label {
+    font-size: 1.2rem;
+    text-align: right;
+    padding: 1rem 0;
+}
+
+label[for="message"] {
+    padding: 2.5rem 0;
+}
+
+input {
+    font-size: 1rem;
+    color: black;
+    padding: 0;
+    text-indent: 20px;
+}
+
+input[name="message"] {
+    grid-column: span 3;
+    /* height: 6.5rem; */
+}
+
+label[for="message"], input[name="message"] {
+    grid-row: span 2;
+}
+
+#submit {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    grid-column: span 4;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    color: black;
+}
+
+#submit:active {
+    background-color: transparent;
+    color: white;
+}
